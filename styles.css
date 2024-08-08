@@ -184,7 +184,7 @@ section.active {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    /* Stack sections vertically */
+    /* Stack sections vertically on medium screens */
     section {
         padding: 1rem;
         margin: 1rem auto;
@@ -227,6 +227,22 @@ section.active {
     }
 
     p, li {
+        font-size: 0.9rem;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+
+    nav ul li a {
         font-size: 0.9rem;
     }
 }
