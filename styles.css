@@ -149,7 +149,7 @@ section p {
 .contact-info {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 1rem; /* Adjust gap as needed */
     flex-wrap: wrap;
 }
 
