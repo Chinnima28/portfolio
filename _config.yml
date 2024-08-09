@@ -1,0 +1,5 @@
+title: Your Portfolio Title
+description: Your portfolio description
+baseurl: "" # the subpath of your site, e.g., /blog
+url: "https://yourdomain.com" # the base hostname & protocol for your site
+theme: minima # example theme
