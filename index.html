@@ -4,135 +4,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHINMAYIE V B S</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Additional Styles */
-        html {
-            scroll-behavior: smooth;
-        }
+    <link rel="stylesheet" href="css/styles.css">
+    <style> /* Header Container Styles */
+        /* Header Container Styles */
+/* Header Container Styles */
+/* Header Container Styles */
+.header-container {
+    display: flex;
+    flex-direction: column; /* Stack header and navigation vertically */
+    padding: 1rem;
+    background-color: #000000; /* Change as needed */
+}
 
-        /* Section Backgrounds */
-        #about {
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
-            color: #fff;
-        }
+.header-top {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;
+    position: relative; /* Allow dropdown to be positioned absolutely */
+    height: 80px; /* Adjust height as needed */
+}
 
-        #projects {
-            background: linear-gradient(to right, #ff6f61, #d82b6d);
-            color: #fff;
-        }
+.header-left {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the heading */
+}
 
-        #experience {
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: #fff;
-        }
+.header-left h1 {
+    margin: 0;
+    color: #FFC0CB; /* Adjust color as needed */
+}
 
-        #skills {
-            background: #e0f7fa;
-        }
+.dropdown {
+    position: absolute;
+    right: 0; /* Place dropdown icon at the rightmost corner */
+}
 
-        #contact {
-            background: linear-gradient(to right, #fbbd08, #d22d2d);
-            color: #fff;
-        }
+.dropdown-button {
+    background-color: #f506e55d;
+    color: #FFC0CB;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
 
-        /* Box Shadows and Transition */
-        section {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 800px;
-            border-radius: 10px;
-        }
+.dropdown-button img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px; /* Space between icon and text */
+}
 
-        /* Highlighted Section */
-        .highlighted {
-            background: #ffffff; /* Default background */
-            border: 2px solid #000000; /* Blue border */
-            transform: scale(1.02); /* Slightly enlarge the section */
-            z-index: 1; /* Ensure it appears above other elements */
-        }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    top: 100%;
+}
 
-        /* Hover Effect for Projects and Experience */
-        .project, .experience {
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
 
-        .project:hover, .experience:hover {
-            transform: scale(1.02);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
 
-        /* Links Section Styles */
-        #links {
-            padding: 2rem;
-            background: linear-gradient(to right, #2193b0, #6dd5ed);
-            color: #fff;
-            text-align: center;
-        }
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
-        #links h2 {
-            font-size: 28px;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #fff;
-            padding-bottom: 0.5rem;
-        }
+.dropdown:hover .dropdown-button {
+    background-color: #ddd;
+}
 
-        #links .links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+/* Navigation Styles */
+nav {
+    margin-top: 1rem;
+}
 
-        #links .links a {
-            margin: 10px;
-            transition: transform 0.3s, filter 0.3s;
-        }
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center; /* Center navigation links */
+}
 
-        #links .links img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            transition: transform 0.3s, filter 0.3s;
-        }
+nav ul li {
+    margin: 0 10px;
+}
 
-        #links .links a:hover img {
-            transform: scale(1.2);
-            filter: brightness(1.2);
-        }
+nav ul li a {
+    text-decoration: none;
+    color: #FFC0CB; /* Adjust color as needed */
+    font-size: 16px;
+}
 
-        /* Footer Style */
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-        }
-    </style>
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Additional Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Backgrounds */
+#about, #projects, #experience, #skills, #contact {
+    background: linear-gradient(to right, #c91e98, #ff00ff);
+    color: #FFC0CB;
+}
+
+/* Box Shadows and Transition */
+section {
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+/* Highlighted Section */
+.highlighted {
+    background: #FFC0CB;
+    border: 2px solid #000000;
+    transform: scale(1.02);
+    z-index: 1;
+}
+
+.highlighted::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: skyblue;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+/* Pop Animation */
+@keyframes pop {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.section-pop {
+    animation: pop 0.5s ease-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect for Projects and Experience */
+.project, .experience {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover, .experience:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Links Section Styles */
+#links {
+    padding: 2rem;
+    background: linear-gradient(to right, #c91e98, #ff00ff);
+    color: #FFC0CB;
+    text-align: center;
+}
+
+#links h2 {
+    font-size: 28px;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ff007f;
+    padding-bottom: 0.5rem;
+}
+
+#links .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#links .links a {
+    margin: 10px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+#links .links img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+#links .links a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+/* Footer Style */
+footer {
+    background: #f506e55d;
+    color: #FFC0CB;
+    padding: 15px 0;
+    text-align: center;
+}
+
+
+        </style>
 </head>
 <body>
-    <header>
-        <h1>CHINMAYIE V B S</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#links">Links</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
     
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="header-left">
+                    <h1>CHINMAYIE V B S</h1>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-button">
+                        Resume & Cover Letter
+                        <img src="https://cdn-icons-png.flaticon.com/512/124/124837.png" alt="Dropdown Icon">
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="C:\Users\chinm\Downloads\Chinmayie's Resume (3).pdf" download>Download Resume</a>
+                        <a href="path-to-your-coverletter.pdf" download>Download Cover Letter</a>
+                    </div>
+                </div>
+            </div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+      
+
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>I’m a skilled developer with a strong background in Java and Python. I’ve worked on notable machine learning projects and have a keen interest in web development using HTML, CSS, and JavaScript. I’m passionate about creating efficient and innovative solutions across different technologies.
-
-</p>
+            <p>I am a passionate web developer and data analyst with experience in creating dynamic web applications and handling data efficiently. My expertise spans across various technologies, enabling me to build robust solutions for diverse needs.</p>
         </section>
         
         <section id="projects">
@@ -154,22 +297,21 @@
                 <p>Empowering inclusivity by converting English content to Hindi for accessible government websites.</p>
             </article>
         </section>
-
+        
         <section id="experience">
             <h2>Experience</h2>
             <article class="experience">
                 <h3>IBM SkillsBuild | Data Analyst</h3>
-                <p>Achieved proficiency in leveraging Python's NumPy library for streamlined data management at IBM, a leading provider of software and hardware solutions.</p>
+                <p>Achieved proficiency in leveraging Python's NumPy library for streamlined data management at IBM.</p>
             </article>
             <article class="experience">
                 <h3>NSIC Ltd. | Android Developer</h3>
-                <p>Built Android apps, gaining hands-on experience with Android Studio at NSIC Ltd.</p>
+                <p>Built Android apps, gaining hands-on experience with Android Studio.</p>
             </article>
         </section>
         
         <section id="skills">
             <h2>My Skills</h2>
-            <p>Here are some of the skills I have acquired:</p>
             <ul>
                 <li><strong>Programming Languages:</strong> C, Python, Java, SQL</li>
                 <li><strong>Conceptuals:</strong> DSA, DBMS</li>
@@ -198,37 +340,34 @@
             </div>
         </section>
     </main>
-
+    
     <footer>
-        <p>&copy; 2024 Chinmayie. All rights reserved.</p>
+        <p>&copy; 2024 Chinmayie V B S</p>
     </footer>
-    <script src="scripts.js"></script>
+
+    <script src="js/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
             const sections = document.querySelectorAll('section');
-            const links = document.querySelectorAll('nav a');
-    
-            links.forEach(link => {
+
+            navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
+
+                    // Remove highlighted class from all sections
+                    sections.forEach(section => section.classList.remove('highlighted'));
+
+                    // Add highlighted class to the target section
                     const targetId = this.getAttribute('href').substring(1);
                     const targetSection = document.getElementById(targetId);
-    
-                    sections.forEach(section => {
-                        section.classList.remove('highlighted');
-                    });
-    
                     targetSection.classList.add('highlighted');
-                    
-                    // Scroll the section into view
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+
+                    // Scroll to the target section
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
                 });
             });
         });
     </script>
-    
 </body>
 </html>
