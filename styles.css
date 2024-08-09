@@ -1,16 +1,13 @@
-/* Existing styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
-    color: #333;
-    background-size: cover;
-    background-attachment: fixed;
+    background: linear-gradient(to right, #000000, #333333); /* Gradient background */
+    color: #e0e0e0;
 }
 
 header {
-    background: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+    background: rgba(51, 51, 51, 0.9); /* Slightly darker background */
     color: #fff;
     padding: 1rem 0;
     text-align: center;
@@ -27,7 +24,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #e0e0e0;
     text-decoration: none;
     font-weight: bold;
 }
@@ -40,35 +37,36 @@ section {
     padding: 2rem;
     margin: 2rem auto;
     max-width: 1300px;
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for sections */
+    background: rgba(34, 34, 34, 0.8); /* Semi-transparent dark background for sections */
+    color: #e0e0e0;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 section h2 {
     font-size: 28px;
-    color: #333;
-    border-bottom: 2px solid #007BFF;
+    color: #f8f8f8;
+    border-bottom: 2px solid #ff007f; /* Electric pink border */
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
 
 section p {
     font-size: 18px;
-    color: #555;
+    color: #e0e0e0;
 }
 
 .project, .experience {
-    background: #fff;
+    background: #444444; /* Slightly lighter background */
     padding: 1rem;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .project h3, .experience h3 {
     margin: 0 0 0.5rem 0;
     font-size: 22px;
-    color: #007BFF;
+    color: #ff007f; /* Electric pink color */
 }
 
 .project p, .experience p {
@@ -83,27 +81,27 @@ section p {
 #skills ul li {
     font-size: 18px;
     margin-bottom: 10px;
-    background: #fff;
+    background: #555555; /* Slightly lighter background */
     padding: 0.5rem;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #skills ul li strong {
-    color: #007BFF;
+    color: #ff007f; /* Electric pink color */
 }
 
 #links {
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-    color: #fff;
+    background: rgba(34, 34, 34, 0.8); /* Semi-transparent dark background */
+    color: #e0e0e0;
     text-align: center;
 }
 
 #links h2 {
     font-size: 28px;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #ff007f; /* Electric pink border */
     padding-bottom: 0.5rem;
 }
 
@@ -132,24 +130,24 @@ section p {
 
 #contact {
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    background: rgba(34, 34, 34, 0.8); /* Semi-transparent dark background */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
 #contact h2 {
     font-size: 28px;
-    color: #0056b3;
+    color: #fff; /* Electric pink color */
     margin-bottom: 1rem;
-    border-bottom: 2px solid #0056b3;
+    border-bottom: 2px solid #ff007f; /* Electric pink border */
     padding-bottom: 0.5rem;
 }
 
 .contact-info {
     display: flex;
     justify-content: center;
-    gap: 1rem; /* Adjust gap as needed */
+    gap: 3rem;
     flex-wrap: wrap;
 }
 
@@ -164,86 +162,19 @@ section p {
 }
 
 footer {
-    background: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+    background: rgba(51, 51, 51, 0.9); /* Slightly darker background */
     color: #fff;
     padding: 15px 0;
     text-align: center;
 }
 
 /* Add this to your existing CSS file */
-
 nav ul li a.active {
-    color: #ff7e5f; /* Highlight color for active link */
+    color: #ff007f; /* Electric pink for active link */
     font-weight: bold;
 }
 
 section.active {
-    border: 2px solid #ff7e5f; /* Border color for active section */
-    background: rgba(255, 255, 255, 0.8); /* Slightly different background for active section */
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    /* Stack sections vertically on medium screens */
-    section {
-        padding: 1rem;
-        margin: 1rem auto;
-        max-width: 100%;
-    }
-
-    #links .links {
-        flex-direction: row;
-        justify-content: center;
-        gap: 1rem; /* Space between items */
-    }
-
-    #links .links img {
-        width: 40px;
-        height: 40px;
-    }
-
-    #contact {
-        padding: 1rem;
-    }
-
-    #contact .contact-info {
-        flex-direction: row;
-        justify-content: center;
-        gap: 1rem; /* Space between items */
-    }
-
-    #contact .contact-info img {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    p, li {
-        font-size: 0.9rem;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 0 0.5rem;
-    }
-
-    nav ul li a {
-        font-size: 0.9rem;
-    }
+    border: 2px solid #ff007f; /* Electric pink border for active section */
+    background: rgba(34, 34, 34, 0.9); /* Slightly darker background for active section */
 }
