@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHINMAYIE V B S</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        
+#links {
+    padding: 2rem;
+    background: linear-gradient(to right, #c91e98, #ff00ff);
+    color: #FFC0CB;
+    text-align: center;
+}
+
+#links h2 {
+    font-size: 28px;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ff007f;
+    padding-bottom: 0.5rem;
+}
+
+#links .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#links .links a {
+    margin: 10px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+#links .links img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+#links .links a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+#contact {
+    padding: 2rem;
+    background: linear-gradient(to right, #c91e98, #ff00ff); /* Match the pink gradient */
+    color: #000; /* Black text color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 28px;
+    color: #cccccc; /* Black text color */
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ff007f;
+    padding-bottom: 0.5rem;
+}
+
+.contact-info a {
+    display: inline-block;
+}
+
+.contact-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.contact-info a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="header-left">
+                    <h1>CHINMAYIE V B S</h1>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-button">
+                        <img src="https://cdn-icons-png.flaticon.com/512/124/124837.png" alt="Dropdown Icon">
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="C:\Users\chinm\Downloads\Chinmayie's Resume (3).pdf" download>Download Resume</a>
+                        <a href="path-to-your-coverletter.pdf" download>Download Cover Letter</a>
+                    </div>
+                </div>
+            </div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+      
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate web developer and data analyst with experience in creating dynamic web applications and handling data efficiently. My expertise spans across various technologies, enabling me to build robust solutions for diverse needs.</p>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <article class="project">
+                <h3>
+                    <a href="https://github.com/Chinnima28/philotes-voice-assistant" class="project-link">
+                        Philotes Voice Assistant (Python)
+                    </a>
+                    <button class="github-button" onclick="location.href='https://github.com/Chinnima28/philotes-voice-assistant';">Go to GitHub</button>
+                </h3>
+                <p>Streamlined voice assistant for seamless user interaction and assistance.</p>
+            </article>
+            <article class="project">
+                <h3>
+                    <a href="https://github.com/Chinnima28/multilingual-melodies" class="project-link">
+                        Multilingual Melodies (Python, Google API, Spotipy, Lyrics Genius)
+                    </a>
+                    <button class="github-button" onclick="location.href='https://github.com/Chinnima28/multilingual-melodies';">Go to GitHub</button>
+                </h3>
+                <p>Enhancing global music experience with meaningful lyrics translations.</p>
+            </article>
+            <article class="project">
+                <h3>
+                    <a href="https://github.com/Chinnima28/pomofomo" class="project-link">
+                        POMOFOMO (HTML, CSS, JS)
+                    </a>
+                    <button class="github-button" onclick="location.href='https://github.com/Chinnima28/pomofomo';">Go to GitHub</button>
+                </h3>
+                <p>A Python-powered scheduler integrated with Flask and HTML, designed to prevent student distractions during online classes by implementing focused time management techniques.</p>
+            </article>
+            <article class="project">
+                <h3>
+                    <a href="https://github.com/Chinnima28/dazai" class="project-link">
+                        DAZAI (Python, Google API, HTML, CSS)
+                    </a>
+                    <button class="github-button" onclick="location.href='https://github.com/Chinnima28/dazai';">Go to GitHub</button>
+                </h3>
+                <p>Empowering inclusivity by converting English content to Hindi for accessible government websites.</p>
+            </article>
+        </section>
+        
+        
+        <section id="experience">
+            <h2>Experience</h2>
+            <article class="experience">
+                <h3>IBM SkillsBuild | Data Analyst</h3>
+                <p>Achieved proficiency in leveraging Python's NumPy library for streamlined data management at IBM.</p>
+            </article>
+            <article class="experience">
+                <h3>NSIC Ltd. | Android Developer</h3>
+                <p>Built Android apps, gaining hands-on experience with Android Studio.</p>
+            </article>
+        </section>
+        
+        <section id="skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> C, Python, Java, SQL</li>
+                <li><strong>Conceptuals:</strong> DSA, DBMS</li>
+                <li><strong>Libraries/Frameworks:</strong> JavaScript, HTML, Numpy, CSS</li>
+                <li><strong>Tools/Platforms:</strong> Visual Studio Code, Eclipse, Jupyter, Spyder, Codeblocks, ChatGPT, Blackbox</li>
+                <li><strong>AI:</strong> Basic concepts and applications</li>
+            </ul>
+        </section>
+        
+        
+        <section id="links">
+            <h2>Links</h2>
+            <div class="links">
+                <a href="https://leetcode.com/u/chinmayiesubramanian/"><img src="https://cdn.iconscout.com/icon/free/png-256/free-leetcode-3521542-2944960.png" alt="Leetcode"></a>
+                <a href="https://github.com/Chinnima28"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLOdpLiEYDPBTrg3TGr6Dye495htSK7pj_zg&s" alt="Github"></a>
+                <a href="https://www.linkedin.com/in/chinmayievbs20032805/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJgjqRZm5Tqysg2sa7AmgIOkkxLjHp7mosTg&s" alt="LinkedIn"></a>
+                <a href="https://www.geeksforgeeks.org/user/chin21jp21/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-fEdR8Yzt566NYsdqqPqq5rV9rjimrkCwdQ&s" alt="GeeksforGeeks"></a>
+                <a href="https://www.skillrack.com/faces/resume.xhtml?id=354884&key=3e1ea94e80a970775126d9d1255be271abec61c7"><img src="https://pbs.twimg.com/profile_images/1046724001039433729/aUapl7nz_400x400.jpg" alt="SkillRack"></a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <a href="tel:9176315067"><img src="https://c1.klipartz.com/pngpicture/275/1017/sticker-png-iphone-logo-telephone-call-handset-white-theme-mobile-phones-orange-circle-thumbnail.png" alt="Phone"></a>
+                <a href="mailto:chinmayiesubramanian@gmail.com"><img src="https://static.vecteezy.com/system/resources/previews/022/484/516/non_2x/google-mail-gmail-icon-logo-symbol-free-png.png" alt="Gmail"></a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Chinmayie V B S</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            const sections = document.querySelectorAll('section');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Remove highlighted class from all sections
+                    sections.forEach(section => section.classList.remove('highlighted'));
+
+                    // Add highlighted class to the target section
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    targetSection.classList.add('highlighted');
+
+                    // Scroll to the target section
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
