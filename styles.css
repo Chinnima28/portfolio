@@ -6,6 +6,214 @@ body {
     color: #e0e0e0;
 }
 
+.header-container {
+    display: flex;
+    flex-direction: column; /* Stack header and navigation vertically */
+    padding: 1rem;
+    background-color: #000000; /* Change as needed */
+}
+
+.header-top {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;
+    position: relative; /* Allow dropdown to be positioned absolutely */
+    height: 80px; /* Adjust height as needed */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the heading */
+}
+
+.header-left h1 {
+    margin: 0;
+    color: #FFC0CB; /* Adjust color as needed */
+}
+
+.dropdown {
+    position: absolute;
+    right: 0; /* Place dropdown icon at the rightmost corner */
+}
+
+.dropdown-button {
+    background-color: #f506e55d;
+    color: #FFC0CB;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-button img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px; /* Space between icon and text */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    top: 100%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-button {
+    background-color: #ddd;
+}
+
+/* Navigation Styles */
+nav {
+    margin-top: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center; /* Center navigation links */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFC0CB; /* Adjust color as needed */
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Additional Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Backgrounds */
+#about, #projects, #experience, #skills, #contact {
+    background: linear-gradient(to right, #c91e98, #ff00ff);
+    color: #FFC0CB;
+}
+
+/* Box Shadows and Transition */
+section {
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+/* Highlighted Section */
+.highlighted {
+    background: #FFC0CB;
+    border: 2px solid #000000;
+    transform: scale(1.02);
+    z-index: 1;
+}
+
+.highlighted::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: skyblue;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+/* Pop Animation */
+@keyframes pop {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.section-pop {
+    animation: pop 0.5s ease-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect for Projects and Experience */
+.project, .experience {
+    background: #4f4e4e; /* Black background */
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.project:hover, .experience:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.github-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #ff007f; /* Electric pink background */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.github-button:hover {
+    background-color: #c91e98; /* Darker pink on hover */
+    transform: scale(1.1);
+}
+
+/* Footer Style */
+footer {
+    background: #f506e55d;
+    color: #FFC0CB;
+    padding: 15px 0;
+    text-align: center;
+}
+
 header {
     background: rgba(51, 51, 51, 0.9); /* Slightly darker background */
     color: #fff;
@@ -36,7 +244,7 @@ main {
 section {
     padding: 2rem;
     margin: 2rem auto;
-    max-width: 1300px;
+    max-width: 1000px;
     background: rgba(34, 34, 34, 0.8); /* Semi-transparent dark background for sections */
     color: #e0e0e0;
     border-radius: 10px;
@@ -46,136 +254,38 @@ section {
 section h2 {
     font-size: 28px;
     color: #f8f8f8;
-    border-bottom: 2px solid #ff007f; /* Electric pink border */
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+    border-bottom: 2px solid #ff00ff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 section p {
     font-size: 18px;
-    color: #e0e0e0;
+    line-height: 1.6;
+    color: #cccccc;
 }
 
-.project, .experience {
-    background: #444444; /* Slightly lighter background */
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.project-link {
+    color: #FFC0CB;
+    text-decoration: none;
 }
 
-.project h3, .experience h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 22px;
-    color: #ff007f; /* Electric pink color */
+.project-link:hover {
+    color: #ff69b4;
+    text-decoration: underline;
 }
 
-.project p, .experience p {
-    margin: 0;
-}
-
-#skills ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#skills ul li {
-    font-size: 18px;
-    margin-bottom: 10px;
-    background: #555555; /* Slightly lighter background */
-    padding: 0.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-#skills ul li strong {
-    color: #ff007f; /* Electric pink color */
-}
-
-#links {
-    padding: 2rem;
-    background: rgba(34, 34, 34, 0.8); /* Semi-transparent dark background */
-    color: #e0e0e0;
-    text-align: center;
-}
-
-#links h2 {
-    font-size: 28px;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #ff007f; /* Electric pink border */
-    padding-bottom: 0.5rem;
-}
-
-#links .links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#links .links a {
-    margin: 10px;
-    transition: transform 0.3s, filter 0.3s;
-}
-
-#links .links img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    transition: transform 0.3s, filter 0.3s;
-}
-
-#links .links a:hover img {
-    transform: scale(1.2);
-    filter: brightness(1.2);
-}
-
-#contact {
-    padding: 2rem;
-    background: rgba(34, 34, 34, 0.8); /* Semi-transparent dark background */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 28px;
-    color: #fff; /* Electric pink color */
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #ff007f; /* Electric pink border */
-    padding-bottom: 0.5rem;
-}
-
-.contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
-
-.contact-info a {
-    display: inline-block;
-}
-
-#contact .contact-info img {
-    width: 40px;  /* Adjust to your desired size */
-    height: 40px; /* Adjust to your desired size */
-    border-radius: 50%;
-}
-
-
-footer {
-    background: rgba(51, 51, 51, 0.9); /* Slightly darker background */
-    color: #fff;
-    padding: 15px 0;
-    text-align: center;
-}
-
-/* Add this to your existing CSS file */
-nav ul li a.active {
-    color: #ff007f; /* Electric pink for active link */
+.project a {
+    text-decoration: none;
+    color: #ff69b4;
     font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
 }
-
-section.active {
-    border: 2px solid #ff007f; /* Electric pink border for active section */
-    background: rgba(34, 34, 34, 0.9); /* Slightly darker background for active section */
+#skills ul li {
+    background-color: #4f4e4e;
+    color:#cccccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
